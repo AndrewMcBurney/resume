@@ -1,0 +1,206 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,500,600|Playfair+Display)
+
+@mixin calc ($property, $expression)
+  #{$property}: -webkit-calc(#{$expression})
+  #{$property}: calc(#{$expression})
+
+// $main-color: royalblue
+$main-color: indianred
+$header-color: #444
+
+.right
+  float: right
+
+.left
+  float: left
+
+ul
+  list-style: none
+  margin-bottom: 0px
+  padding-left: 0px
+
+  div
+    overflow: auto
+
+    bdi
+      float: left
+
+    li
+      float: right
+      padding-bottom: 8px
+      text-align: justify
+      width: 96%
+
+img
+  width: 22px
+  height: auto
+  margin: 2px 0px 5px 0px
+
+p.no-margin-top
+  margin-top: 0px
+
+hr.no-margin-bottom
+  margin-bottom: 0px
+
+body
+  background-color: #fff
+  color: #000
+  margin: 0px
+  font-family: Lato
+  font-weight: 300 !important
+  -webkit-font-smoothing: antialiased !important
+
+  main
+    margin: 0 auto
+    position: relative
+    top: 0px
+    width: 980px
+
+  article.no-bottom
+    padding-bottom: 0px
+
+  article
+    padding-bottom: 6px
+    overflow: auto
+
+    h3
+      float: left
+      margin: 0px
+
+    h4
+      font-size: 18px
+      font-weight: 400
+      margin: 0px 0px 4px
+
+      span
+        font-size: 16px
+        float: right
+
+    h5
+      margin: 0px
+      font-size: 14px
+      font-weight: 400
+
+      span
+        float: right
+
+body
+  main
+    h1, h2, h3, h4, h5, a
+      color: $header-color
+      font-weight: 500
+
+    h1
+      // NOTE: old style
+      // font-size: 22px
+      // font-family: remove Playfair for old style
+      // letter-spacing: none
+      font-size: 24px
+      letter-spacing: 0.4px
+
+    #left
+      float: left
+      margin: 0% 3%
+      width: 63%
+
+      br
+        display: block
+        content: ""
+        margin-top: 5px
+
+      li
+        span
+          color: $main-color
+          font-weight: 400
+
+      #work
+        margin-top: 28px
+
+      #projects
+        span
+          a
+            text-decoration: none
+
+      #name
+        h1
+          font-size: 48px
+          font-family: 'Playfair Display', serif
+          font-weight: 300
+          margin: 28px 0px 0px
+          word-spacing: 2px
+          letter-spacing: 1px
+
+        h2
+          font-size: 17.25px
+          font-weight: 500
+          letter-spacing: 0.475px
+
+      h1
+        color: $main-color
+        margin-top: 2px
+
+    #right
+      background: $main-color
+      color: #fff
+      float: right
+      height: 1268px
+      width: 29%
+
+      p
+        font-weight: 400 !important
+        margin-bottom: 40px
+
+      #details
+        margin: 25px 20px 0px 20px
+        overflow: auto
+
+        a
+          color: #ffffff
+          text-decoration: none
+          font-weight: 400
+
+        #text
+          float: left
+          line-height: 1.4
+          width: 87%
+
+          p
+            font-size: 14px
+            margin: 13px 0px 0px
+
+        #icons
+          float: left
+          width: 13%
+          margin-top: 9px
+
+      #education
+        h4
+          margin: 0px
+
+      #volunteering
+        h4
+          font-weight: 400
+          margin-bottom: 0px
+
+      section
+        margin: 0px 20px
+
+        h1, h3, h4
+          color: #fff
+
+        p
+          text-align: justify
+          word-spacing: 4px
+
+        br
+          content: ""
+          margin: 1em
+          display: block
+          font-size: 24%
+
+        span
+          font-weight: 400
+
+          a
+            font-size: 16px
+            font-weight: 300

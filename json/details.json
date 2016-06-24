@@ -1,0 +1,96 @@
+{
+    "logo_prefix": "logo_prefix_value",
+    "stylesheet": "stylesheet_value",
+    "jobs": [
+        {
+            "company": "Datadog",
+            "title": "Software Engineering Intern",
+            "location": "New York, NY | USA",
+            "date": "Jan. 2018 &mdash; Apr. 2018",
+            "bullets": [
+                "Implemented a persistent caching system for Homebrew, improving performance of the <code>brew linkage</code> command by 97%; wrote a <a href=\"https://www.datadoghq.com/blog/engineering/using-datadog-apm-to-find-bottlenecks-and-performance-benchmarking/\">blog post</a> detailing the analysis & optimization.",
+                "Built an <a href ='https://github.com/DataDog/gello'>open-source</a>, self-hosted server for managing Trello cards based on GitHub events, allowing teams to incorporate community contributions into their agile sprints."
+            ]
+        },
+        {
+            "company": "Doximity",
+            "title": "Software Engineering Intern",
+            "location": "San Francisco, CA | USA",
+            "date": "May 2017 &mdash; Aug. 2017",
+            "bullets": [
+                "Created an internal web scraper to query GitHub's GraphQL API to find potential hires for engineering outsourcing; wrote a <a href=\"https://www.andrewrobertmcburney.com/blog/graphql-vs-rest\">blog post</a> detailing the robustness of GitHub's GraphQL API and comparing the tradeoffs between their REST API.",
+                "Implemented a redis-based locking mechanism for an internal deployment tool restricting the number of deployment jobs to one job per environment."
+            ]
+        },
+        {
+            "company": "Vena Solutions",
+            "title": "Software Developer Intern",
+            "location": "Toronto, ON | Canada",
+            "date": "Sep. 2016 &mdash; Dec. 2016",
+            "bullets": [
+                "Optimized SQL queries solving a n+1 query problem by fetching lazily loaded object members before serialization, decreasing mean response rate by 99% (~1m to <1s)."
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "title": "Fastlane",
+            "url": "github.com/fastlane/ci",
+            "type": "Mobile Continuous Integration",
+            "date": "Feb. 2018 &mdash; Present",
+            "bullets": [
+                "Core contributor to <a href=\"https://fastlane.tools/\">Fastlane Tools</a>, helping build the backend infrastructure for their mobile-first continuous integration system."
+            ]
+        },
+        {
+            "title": "Conductor",
+            "url": "github.com/armcburney/conductor",
+            "type": "Distributed Job-Scheduling System",
+            "date": "Sep. 2017 &mdash; Dec. 2017",
+            "bullets": [
+                "Co-implemented a distributed job management system for registering workers, and scheduling jobs to execute on them, allowing for conditional scheduling."
+            ]
+        },
+        {
+            "title": "Emerald Language",
+            "url": "github.com/emerald-lang",
+            "type": "HTML5 Templating Engine",
+            "date": "Sep. 2016 &mdash; Dec. 2017",
+            "bullets": [
+                "Designed and implemented a whitespace-delimited HTML5 templating engine with support for variable scoping, interpolation, iteration, and conditional logic."
+            ]
+        }
+    ],
+    "skills": [{
+            "title": "Languages",
+            "tools": [
+                "Ruby",
+                "Go",
+                "Python",
+                "TypeScript",
+                "JavaScript",
+                "Emacs Lisp",
+                "C++"
+            ]
+        },
+        {
+            "title": "Technologies",
+            "tools": [
+                "Ruby on Rails",
+                "Angular",
+                "Docker",
+                "PostgreSQL",
+                "MySQL",
+                "WebGL",
+                "HTML5",
+                "CSS3"
+            ]
+        }
+    ],
+    "interests": [
+        "Distributed Systems",
+        "Functional Programming",
+        "Computer Graphics",
+        "Recording Music"
+    ]
+}

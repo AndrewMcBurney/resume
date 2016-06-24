@@ -1,0 +1,135 @@
+*
+* Andrew McBurney's Resume
+* Last updated: October 27th, 2018
+* Built with Emerald Templating Engine
+*
+
+html
+  head
+    title Andrew McBurney's Resume
+
+    metas
+      charset "utf-8"
+      name "viewport" content "initial-scale=1.0"
+
+    styles
+      "../css/resume.css"
+      "|stylesheet|"
+
+  body
+    main
+      *
+      * Left column, pertains to work experience, personal projects, and open
+      * source initiatives.
+      *
+      div#left
+        div#name
+          h1 Andrew Robert McBurney
+          h2 ~>
+            Software Engineer | (289) 241-7988 | andrewrobertmcburney@gmail.com
+
+        section#work
+          h1 Workplace Experience
+
+          each jobs as job
+            article
+              h4
+                a |job.title|
+                span |job.date|
+              h5
+                a |job.company|
+                span |job.location|
+
+              ul
+                each job.bullets as bullet
+                  div
+                    bdi &#62;&#62;
+                    li |bullet|
+
+        section#projects
+          h1 Open Source Experience
+
+          each projects as project
+            article
+              h4
+                a |project.title|
+                span |project.date|
+              h5
+                a |project.type|
+                span
+                  a |project.url| (
+                    href "https://|project.url|"
+                  )
+              ul
+                each project.bullets as bullet
+                  div
+                    bdi &#62;&#62;
+                    li |bullet|
+
+        section#volunteering
+          h1 Leadership Experience
+
+          article
+            h4
+              a Vice President, Academic
+              span Sep. 2016 &mdash; Dec. 2017
+            h5
+              a Waterloo Engineering Society
+              span Waterloo, ON | Canada
+
+            ul
+              div
+                bdi &#62;&#62;
+                li ~>
+                  Coordinated professional development events for hundreds of
+                  engineering students such as tech talks, career fairs,
+                  r&eacute;sum&eacute; critiques, and interview skills workshops.
+
+      *
+      * Right column, pertains to technical skills, education, awards, and
+      * volunteer experience.
+      *
+      div#right
+        div#details
+          div#icons
+            images
+              "../images/logos/colour/twitter.png"
+              "../images/logos/colour/monitor.png"
+              "../images/logos/colour/github.png"
+
+          div#text
+            p
+              a @armcburney (
+                href "https://twitter.com/armcburney"
+              )
+            p
+              a armcburney.com (
+                href "http://www.andrewrobertmcburney.com/"
+              )
+            p
+              a armcburney (
+                href "https://www.github.com/armcburney"
+              )
+
+        section#skills
+          each skills as skill
+            h1 |skill.title|
+            p
+              each skill.tools as tool
+                span |tool|
+                br
+
+        section#interests
+          h1 Interests
+          p
+            each interests as interest
+              span |interest|
+              br
+
+        section#education
+          h1 Education
+          h4 Bachelor of Software Engineering
+          p
+            small University of Waterloo, Waterloo ON
+            br
+            small Sep. 2014 &mdash; Apr. 2019

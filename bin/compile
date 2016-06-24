@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "json"
+require "tempfile"
+
+def compile_sass
+  puts "Compiling sass assets."
+
+  # Create css directory if it does not exist.
+  Dir.mkdir "public/css" unless File.directory? "public/css"
+
+  # Compile sass stylesheets in compressed format.
+  `sass --update sass/resume.sass:public/css/resume.css --style compressed`
+  `sass --update sass/colour.sass:public/css/colour.css --style compressed`
+end
+
+# Modifies json context and creates a temporary json file for use during the
+# compile stage.
+def modify_json_context(logo_prefix_value, stylesheet_path)
+  json_context = JSON.parse(File.read("./json/details.json"))
+  json_context["stylesheet"] = stylesheet_path
+  json_context["logo_prefix"] = "../images/logos/#{logo_prefix_value}/"
+
+  # Create new json context and return it.
+  new_context = Tempfile.new(["temp_json", ".json"])
+  new_context.write(json_context.to_json)
+  new_context.read
+  new_context
+end
+
+# Compiles emerald source files and modifies JSON context passed in.
+def compile_emerald(suffix, stylesheet_path)
+  puts "Compiling emerald assets."
+
+  # Create html directory if it does not exist.
+  Dir.mkdir "public/html" unless File.directory? "public/html"
+
+  # Modify json context for stylesheet option.
+  tmpfile = modify_json_context(suffix, stylesheet_path)
+
+  # Process emerald file and compile it with json context.
+  `emerald process -o public/html/resume_#{suffix} emerald/resume.emr #{tmpfile.path}`
+
+  # Remove temporary json file.
+  tmpfile.close
+  tmpfile.unlink
+end
+
+compile_sass
+compile_emerald("colour", "../css/colour.css")
