@@ -48,7 +48,7 @@
             "type": "Core Contributor",
             "date": "Feb. 2018 &mdash; Sept. 2018",
             "bullets": [
-                "Helped design and implement the backend for their open source <i>mobile-first</i> continuous integration platform.",
+                "Helped design and implement the backend for their open source mobile-first continuous integration platform.",
                 "Contributed with <a href=\"https://github.com/fastlane/ci/graphs/contributors\">over 50 pull requests</a>, modified over 10,000 lines of backend code."
             ]
         },
@@ -58,7 +58,7 @@
             "type": "Distributed Job-Scheduling System",
             "date": "Sept. 2017 &mdash; Dec. 2017",
             "bullets": [
-                "Co-implemented a distributed job management system for registering workers, and scheduling jobs to execute on them, allowing for conditional scheduling."
+                "Co-implemented a distributed job management system for registering workers and scheduling jobs to execute on them; allowed for conditional scheduling based on users' business logic."
             ]
         }
     ],
