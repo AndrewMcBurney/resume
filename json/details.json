@@ -58,7 +58,7 @@
             "type": "Distributed Job-Scheduling System",
             "date": "Sept. 2017 &mdash; Dec. 2017",
             "bullets": [
-                "Co-implemented a distributed job management system for registering workers and scheduling jobs to execute on them; allowed for conditional scheduling based on users' business logic."
+                "Co-implemented a distributed job management system for registering workers and scheduling jobs to execute, allowing for conditional scheduling based on users' business logic."
             ]
         }
     ],
